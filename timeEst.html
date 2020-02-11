@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Smart Airport.Estimated Time</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand" href="#">Smart Airport</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">Home</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Custom Entry</a>
+								</li>
+								<li>
+									<a href="#">Security Check</a>
+								</li>
+								<li>
+									<a href="#">Baggage Claim</a>
+								</li>
+								<li>
+									<a href="#">Restaurant Wait</a>
+								</li>
+								<li role="separator" class="divider"></li>
+								<li class="dropdown-header">Other Link</li>
+								<li>
+									<a href="#">DFW Airport Map</a>
+								</li>
+								<li>
+									<a href="#">Local Service</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#about">About</a>
+						</li>
+						<li>
+							<a href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</nav>
+
+	</body>
+	<script>
+		window.onload = function() {
+
+			var chart = new CanvasJS.Chart("chartContainer", {
+				animationEnabled: true,
+				theme: "light2", // "light1", "light2", "dark1", "dark2"
+				title: {
+					text: "Top Oil Reserves"
+				},
+				axisY: {
+					title: "Reserves(MMbbl)"
+				},
+				data: [{
+					type: "column",
+					showInLegend: true,
+					legendMarkerColor: "grey",
+					legendText: "MMbbl = one million barrels",
+					dataPoints: [{
+							y: 300878,
+							label: "Venezuela"
+						},
+						{
+							y: 80000,
+							label: "Russia"
+						}
+					]
+				}]
+			});
+			chart.render();
+
+		}
+	</script>
+
+		<div id="chartContainer" style="width: 100%; height: 500px;"></div>
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+
+</html>
